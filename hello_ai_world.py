@@ -16,6 +16,8 @@ def main():
 
     # Get the API key from the environment
     api_key = os.getenv("GEMINI_API_KEY")
+    #print(DOTENV_PATH)
+    #print(f"API Key cargada con éxito: {api_key}")
 
     if not api_key:
         print("Error: GEMINI_API_KEY not found.")
@@ -27,7 +29,7 @@ def main():
         client = genai.Client(api_key=api_key)
 
         response = client.models.generate_content(
-            model="gemini-3-flash-preview",
+            model="gemini-2.5-flash",
             contents="Write a short poem about the moon."
         )
 
