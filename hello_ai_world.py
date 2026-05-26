@@ -2,10 +2,17 @@
 import os
 from google import genai
 from dotenv import load_dotenv
+from pathlib import Path
 
 def main():
+    # 1. Get the project's Path
+    PROYECTO_DIR = Path(__file__).resolve().parent
+
+    # 2. Go up to the parent folder and enter to tokens folder
+    DOTENV_PATH = PROYECTO_DIR.parent.parent / "aistudio.google.com" / "GEMINI_API_KEY.env"
+
     # Load environment variables from .env file
-    load_dotenv()
+    load_dotenv(dotenv_path=DOTENV_PATH)
 
     # Get the API key from the environment
     api_key = os.getenv("GEMINI_API_KEY")
