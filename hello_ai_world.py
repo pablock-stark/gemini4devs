@@ -30,7 +30,7 @@ def main():
 
         response = client.models.generate_content(
             model="gemini-2.5-flash",
-            contents="Write a short poem about the moon."
+            contents="How can I prepare baked falafel?"
         )
 
         # Print the response

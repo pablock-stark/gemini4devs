@@ -120,7 +120,5 @@ def get_coaching(prompt: str, style: str = "quick") -> None:
 # --- Test calls ---
 if __name__ == "__main__":
     print("Running tests...")
-    # get_coaching("What is the RSI and stock price of Abbott right now?", style="quick")
-    # get_coaching("What is the likely scenario in the medium term for Abbott's stock?", style="deep")
     get_coaching("What are three tips for public speaking?", style="quick")
     get_coaching("Write a short, motivational speech about overcoming challenges.", style="deep")
